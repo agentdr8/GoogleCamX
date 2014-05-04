@@ -145,11 +145,10 @@ public class Mod implements IXposedHookLoadPackage {
 						if (DEBUG) log("Zoom in");
 						if (zoomlvl < zoommax) {
 							zoomlvl += 1;
-							callMethod(mparam.thisObject, "onZoomChanged", zoomlvl);
 						} else {
 							zoomlvl = zoommax;
-							callMethod(mparam.thisObject, "onZoomChanged", zoomlvl);
 						}
+						callMethod(mparam.thisObject, "onZoomChanged", zoomlvl);
 						break;
 					case 25:
 						if (DEBUG) log("Zoom out");
@@ -190,11 +189,10 @@ public class Mod implements IXposedHookLoadPackage {
 						if (DEBUG) log("Zoom video in");
 						if (vzoomlvl < vzoommax) {
 							vzoomlvl += 1;
-							callMethod(mparam.thisObject, "onZoomChanged", vzoomlvl);
 						} else {
 							vzoomlvl = vzoommax;
-							callMethod(mparam.thisObject, "onZoomChanged", vzoomlvl);
 						}
+						callMethod(mparam.thisObject, "onZoomChanged", vzoomlvl);
 						break;
 					case 25:
 						if (DEBUG) log("Zoom video out");
